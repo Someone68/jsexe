@@ -1,4 +1,6 @@
 /// script_execution.js
+/// alias jseval.js
+/// world ISOLATED
 window.addEventListener("keyup", (event) => {
 	if (event.ctrlKey && event.code === "Backquote") {
 		let command = prompt("Evaluate Command:");
@@ -12,6 +14,8 @@ window.addEventListener("keyup", (event) => {
 });
 
 /// firebug_lite_devtools.js
+/// alias fblite.js
+/// world ISOLATED
 window.addEventListener("keyup", (event) => {
 	function loadScript() {
 		let firebugscript = document.createElement("script");

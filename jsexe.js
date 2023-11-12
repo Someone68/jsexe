@@ -16,22 +16,23 @@ window.addEventListener("keyup", (event) => {
 /// firebug_lite_devtools.js
 /// alias fblite.js
 /// world ISOLATED
+/// execute_script.js
 window.addEventListener("keyup", (event) => {
-	if (event.ctrlKey && event.altKey && event.code === "Backslash") {
-		function loadScript() {
-			let firebugscript = document.createElement("script");
-			firebugscript.src =
-				"https://h4shtag.pages.dev/projects/js-exe/firebug-lite-debug.js";
-
-			firebugscript.classList.add("firebug-script");
-			if (document.head) {
-				document.head.append(firebugscript);
+	if (event.ctrlKey && event.altKey && event.key === "]") {
+		let firebug = document.createElement("script");
+		firebug.setAttribute(
+			"src",
+			"https://h4shtag.pages.dev/projects/js-exe/firebug-lite-debug.js"
+		);
+		document.body.appendChild(firebug);
+		function startfirebug() {
+			if (window.Firebug) {
+				window.Firebug.ConsolePanel();
+			} else {
+				setTimeout(startfirebug);
 			}
 		}
-		if (document.querySelector(".firebug-script")) {
-			window.Firebug.ConsolePanel();
-		} else {
-			loadScript();
-		}
+		startfirebug();
+		void firebug;
 	}
 });

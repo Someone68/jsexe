@@ -12,7 +12,6 @@ window.addEventListener("keyup", (event) => {
 });
 
 /// firebug_lite_devtools.js
-
 window.addEventListener("keyup", (event) => {
 	function loadScript() {
 		let firebugscript = document.createElement("script");

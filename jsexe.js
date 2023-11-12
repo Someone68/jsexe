@@ -30,17 +30,4 @@ window.addEventListener("keyup", (event) => {
 			loadScript();
 		}
 	}
-
-	function openFirebug(firebug) {
-		try {
-			console.log(arguments);
-			if (window.Firebug.version) {
-				firebug.consolePanel();
-			} else {
-				setTimeout(openFirebug);
-			}
-		} catch (err) {
-			setTimeout(openFirebug);
-		}
-	}
 });

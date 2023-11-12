@@ -16,7 +16,6 @@ window.addEventListener("keyup", (event) => {
 /// firebug_lite_devtools.js
 /// alias fblite.js
 /// world ISOLATED
-/// execute_script.js
 window.addEventListener("keyup", (event) => {
 	if (event.ctrlKey && event.altKey && event.key === "]") {
 		let firebug = document.createElement("script");

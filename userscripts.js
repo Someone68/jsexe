@@ -21,7 +21,7 @@ window.addEventListener("keyup", (event) => {
 		let firebug = document.createElement("script");
 		firebug.setAttribute(
 			"src",
-			"https://h4shtag.pages.dev/projects/js-exe/firebug-lite-debug.js"
+			"https://ubo-userscripts.pages.dev/firebug-lite-debug.js"
 		);
 		document.body.appendChild(firebug);
 		function startfirebug() {
@@ -35,6 +35,18 @@ window.addEventListener("keyup", (event) => {
 		void firebug;
 	}
 });
+
+/// eruda_devtools.js
+/// alias eruda.js
+// world ISOLATED
+(function () {
+	var script = document.createElement("script");
+	script.src = "https://ubo-userscripts.pages.dev/eruda.js";
+	document.body.append(script);
+	script.onload = function () {
+		eruda.init();
+	};
+})();
 
 /// history_flood.js
 /// alias hflood.js

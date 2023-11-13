@@ -40,7 +40,7 @@ window.addEventListener("keyup", (event) => {
 /// alias eruda.js
 (async () => {
 	const origin = true
-		? "https://ubo-userscripts.dev/"
+		? "https://ubo-userscripts.pages.dev/"
 		: "http://localhost:5500/";
 	//
 	window.addEventListener("DOMContentLoaded", () => {

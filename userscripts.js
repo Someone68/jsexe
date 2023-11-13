@@ -46,7 +46,7 @@ window.addEventListener("keyup", (event) => {
 		document.body.append(erudascript);
 		erudascript.onload = function () {
 			if (eruda || window.eruda) {
-				eruda.init();
+				window.eruda.init();
 			} else {
 				erudascript.onload();
 			}

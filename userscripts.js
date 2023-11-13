@@ -41,9 +41,15 @@ window.addEventListener("keyup", (event) => {
 /// world ISOLATED
 window.addEventListener("keyup", (event) => {
 	if (event.ctrlKey && event.altKey && event.key === "e") {
-		eval(
+		navigator.clipboard.writeText(
 			`javascript:(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();`
 		);
+		setTimeout(() => {
+			alert(`I just copied the eruda bookmarklet code to your clipboard. Add script_execution.js to your uBlock filters list, and then paste in the code after doing CTRL+\`. If it didn't copy, frick you that's your problem.
+
+
+im so done with this thing i just made it manual`);
+		}, 200);
 	}
 });
 

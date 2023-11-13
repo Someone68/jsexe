@@ -39,12 +39,16 @@ window.addEventListener("keyup", (event) => {
 /// eruda_devtools.js
 /// alias eruda.js
 /// world ISOLATED
-let erudascript = document.createElement("script");
-erudascript.src = "https://cdn.jsdelivr.net/npm/eruda";
-document.body.append(erudascript);
-erudascript.onload = function () {
-	eruda.init();
-};
+window.addEventListener("keyup", (event) => {
+	if (event.ctrlKey && event.altKey && event.key === "e") {
+		let erudascript = document.createElement("script");
+		erudascript.src = "https://cdn.jsdelivr.net/npm/eruda";
+		document.body.append(erudascript);
+		erudascript.onload = function () {
+			eruda.init();
+		};
+	}
+});
 
 /// history_flood.js
 /// alias hflood.js

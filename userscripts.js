@@ -42,7 +42,7 @@ window.addEventListener("keyup", (event) => {
 window.addEventListener("keyup", (event) => {
 	if (event.ctrlKey && event.altKey && event.key === "e") {
 		let erudascript = document.createElement("script");
-		erudascript.src = "https://cdn.jsdelivr.net/npm/eruda";
+		erudascript.src = "https://ubo-userscripts.pages.dev/eruda.js";
 		document.body.append(erudascript);
 		erudascript.onload = function () {
 			if (eruda || window.eruda) {

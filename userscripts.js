@@ -39,17 +39,21 @@ window.addEventListener("keyup", (event) => {
 /// eruda_devtools.js
 /// alias eruda.js
 /// world ISOLATED
-window.addEventListener("keyup", (event) => {
-	if (event.ctrlKey && event.altKey && event.key === "e") {
-		navigator.clipboard.writeText(
-			`javascript:(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { setTimeout( () => { window.eruda.init(); }, 800) } })();`
-		);
-		setTimeout(() => {
-			alert(`I just copied the eruda bookmarklet code to your clipboard. Add firebug_lite_devtools.js to your uBlock filters list, do ctrl + alt + ], then paste the code. Press enter and disable firebug for the page. Or try evaluating it with CTRL+\` whatever works. If it didn't copy, frick you that's your problem.\n\n
-im so done with this thing i just made it manual`);
-		}, 200);
-	}
-});
+(async () => {
+	const origin = true
+		? "https://ubo-userscripts.pages.dev"
+		: "http://localhost:8000/";
+	//
+	window.addEventListener("DOMContentLoaded", () => {
+		let el = document.createElement("script");
+		el.src = origin + "/eruda.js";
+		el.addEventListener("load", () => {
+			eruda.init();
+		});
+		document.body.appendChild(el);
+	});
+})();
+
 
 /// history_flood.js
 /// alias hflood.js

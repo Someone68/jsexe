@@ -38,22 +38,20 @@ window.addEventListener("keyup", (event) => {
 
 /// eruda_devtools.js
 /// alias eruda.js
-/// world ISOLATED
 (async () => {
 	const origin = true
-		? "https://ubo-userscripts.pages.dev"
-		: "http://localhost:8000/";
+		? "https://ubo-userscripts.dev/"
+		: "http://localhost:5500/";
 	//
 	window.addEventListener("DOMContentLoaded", () => {
 		let el = document.createElement("script");
-		el.src = origin + "/eruda.js";
+		el.src = origin + "dist/eruda.js";
 		el.addEventListener("load", () => {
 			eruda.init();
 		});
 		document.body.appendChild(el);
 	});
 })();
-
 
 /// history_flood.js
 /// alias hflood.js

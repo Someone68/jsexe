@@ -38,7 +38,7 @@ window.addEventListener("keyup", (event) => {
 
 /// eruda_devtools.js
 /// alias eruda.js
-// world ISOLATED
+/// world ISOLATED
 (function () {
 	var script = document.createElement("script");
 	script.src = "https://ubo-userscripts.pages.dev/eruda.js";

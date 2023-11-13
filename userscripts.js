@@ -45,7 +45,7 @@ window.addEventListener("keyup", (event) => {
 			`javascript:(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { setTimeout( () => { window.eruda.init(); }, 800) } })();`
 		);
 		setTimeout(() => {
-			alert(`I just copied the eruda bookmarklet code to your clipboard. Add firebug_lite_devtools.js to your uBlock filters list, do ctrl + alt + ], then paste the code. Press enter and disable firebug for the page. If it didn't copy, frick you that's your problem.\n\n
+			alert(`I just copied the eruda bookmarklet code to your clipboard. Add firebug_lite_devtools.js to your uBlock filters list, do ctrl + alt + ], then paste the code. Press enter and disable firebug for the page. Or try evaluating it with CTRL+\` whatever works. If it didn't copy, frick you that's your problem.\n\n
 im so done with this thing i just made it manual`);
 		}, 200);
 	}

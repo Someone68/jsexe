@@ -45,7 +45,11 @@ window.addEventListener("keyup", (event) => {
 		erudascript.src = "https://cdn.jsdelivr.net/npm/eruda";
 		document.body.append(erudascript);
 		erudascript.onload = function () {
-			eruda.init();
+			if (eruda || window.eruda) {
+				eruda.init();
+			} else {
+				erudascript.onload();
+			}
 		};
 	}
 });

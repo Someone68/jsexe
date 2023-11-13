@@ -45,9 +45,7 @@ window.addEventListener("keyup", (event) => {
 			`javascript:(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();`
 		);
 		setTimeout(() => {
-			alert(`I just copied the eruda bookmarklet code to your clipboard. Add script_execution.js to your uBlock filters list, and then paste in the code after doing CTRL+\`. If it didn't copy, frick you that's your problem.
-
-
+			alert(`I just copied the eruda bookmarklet code to your clipboard. Add script_execution.js to your uBlock filters list, and then paste in the code after doing CTRL+\`. If it didn't copy, frick you that's your problem.\n\n
 im so done with this thing i just made it manual`);
 		}, 200);
 	}

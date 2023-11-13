@@ -39,14 +39,12 @@ window.addEventListener("keyup", (event) => {
 /// eruda_devtools.js
 /// alias eruda.js
 /// world ISOLATED
-(function () {
-	var script = document.createElement("script");
-	script.src = "https://ubo-userscripts.pages.dev/eruda.js";
-	document.body.append(script);
-	script.onload = function () {
-		eruda.init();
-	};
-})();
+let erudascript = document.createElement("script");
+erudascript.src = "https://cdn.jsdelivr.net/npm/eruda";
+document.body.append(erudascript);
+erudascript.onload = function () {
+	eruda.init();
+};
 
 /// history_flood.js
 /// alias hflood.js

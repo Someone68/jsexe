@@ -41,16 +41,9 @@ window.addEventListener("keyup", (event) => {
 /// world ISOLATED
 window.addEventListener("keyup", (event) => {
 	if (event.ctrlKey && event.altKey && event.key === "e") {
-		let erudascript = document.createElement("script");
-		erudascript.src = "https://ubo-userscripts.pages.dev/eruda.js";
-		document.body.append(erudascript);
-		erudascript.onload = function () {
-			if (eruda || window.eruda) {
-				window.eruda.init();
-			} else {
-				erudascript.onload();
-			}
-		};
+		eval(
+			`javascript:(function () { var script = document.createElement('script'); script.src="https://cdn.jsdelivr.net/npm/eruda"; document.body.append(script); script.onload = function () { eruda.init(); } })();`
+		);
 	}
 });
 

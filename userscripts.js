@@ -39,7 +39,7 @@ window.addEventListener("keyup", (event) => {
 /// eruda_devtools.js
 /// alias eruda.js
 (async () => {
-	const origin = true ? "https://c0ol.netlify.app" : "http://localhost:5500/";
+	const origin = true ? "https://c0ol.netlify.app/" : "http://localhost:5500/";
 	//
 	window.addEventListener("DOMContentLoaded", () => {
 		let el = document.createElement("script");
